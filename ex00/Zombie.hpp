@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 18:34:44 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/10/02 19:06:38 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:14:45 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,21 @@
 
 #include <iostream>
 #include <string>
-#include "newZombie.cpp"
+
+void 	randomChump(std::string name);
 
 class Zombie
 {
-private:
-	std::string	name;
-public:
-	Zombie(/* args */);
-	~Zombie();
+	public:
+		Zombie();
+		Zombie(std::string name);
+		~Zombie();
 
-	void	announce(void);
-	Zombie* newZombie( std::string name );
+		void	announce(void);
+		Zombie* newZombie(std::string name);
+
+	private:
+		std::string	_name;
 };
 
 #endif
