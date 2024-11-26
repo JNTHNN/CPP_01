@@ -5,38 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/04 14:41:21 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/26 18:41:39 by jgasparo         ###   ########.fr       */
+/*   Created: 2024/11/26 16:21:12 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/11/26 19:18:02 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Zombie.hpp"
 
-bool	checkNames(const int nb)
+int	main(void)
 {
-	switch (nb)
-	{
-		case 1:
-			std::cout << NO_NAME << std::endl;
-			return false;
-		case 2:
-			std::cout << MISSING_NAME << std::endl;
-			return false;
-		case 3:
-			return true;
-		default:
-			std::cout << TOO_MANY << std::endl;
-			return false;
-	}
-}
+	Zombie		*horde;
+	const int	zombieCount = 10;
 
-int	main(int argc, char **argv)
-{
-	if (checkNames(argc))
-	{
-		Zombie*	zombie(nullptr);
-		zombie->newZombie(argv[1]);
-		randomChump(argv[2]);
-	}
-	return 0;
+	horde = zombieHorde(zombieCount, "Monster");
+	if (!horde)
+		return EXIT_FAILURE;
+	for (int i = 0; i < zombieCount; ++i)
+		horde[i].announce();
+	delete []horde;
+	horde = nullptr;
+	return EXIT_SUCCESS;
 }
