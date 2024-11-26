@@ -6,7 +6,7 @@
 #    By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/04 14:39:41 by jgasparo          #+#    #+#              #
-#    Updated: 2024/10/04 19:25:27 by jgasparo         ###   ########.fr        #
+#    Updated: 2024/11/26 16:11:07 by jgasparo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,9 +41,17 @@ $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
 	@$(CC) $(CFLAGS) -I $(INC_DIR) -o $@ -c $<
 	
 clean:
+	@$(RM) -fr $(OBJ_DIR)
+	@echo ZOMBIE DESTROYED BYE !
+	@sleep 1
+	@tput cuu1 dl1
+
+fclean: clean
 	@$(RM) $(NAME)
 	@echo ZOMBIE DESTROYED BYE !
 	@sleep 1
 	@tput cuu1 dl1
 
-.PHONY : all clean
+re: fclean all
+
+.PHONY : all clean fclean re
