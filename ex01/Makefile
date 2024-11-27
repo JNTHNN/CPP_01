@@ -6,25 +6,27 @@
 #    By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/04 21:39:19 by jgasparo          #+#    #+#              #
-#    Updated: 2024/11/26 19:17:41 by jgasparo         ###   ########.fr        #
+#    Updated: 2024/11/27 18:36:43 by jgasparo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := zombie
+NAME 		:= zombie
 
-CPP := c++
-CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98
+CPP 		:= c++
+CPPFLAGS	:= -MMD -Wall -Wextra -Werror -std=c++98
 
-SRC_DIR		=	sources/
-OBJ_DIR		=	.obj/
-INC_DIR		=	include/
+SRC_DIR		:=	sources/
+OBJ_DIR		:=	.obj/
+DEP_DIR		:=	.dep/
+INC_DIR		:=	include/
 
 SRC_FILES	:= main.cpp Zombie.cpp zombieHorde.cpp 
-
 OBJ_FILES	:=	$(SRC_FILES:.cpp=.o)
+DEP_FILES   :=	$(OBJ_FILES:.o=.d)
 
-SRC			=	$(addprefix $(SRC_DIR), $(SRC_FILES))
-OBJ			=	$(addprefix $(OBJ_DIR), $(OBJ_FILES))
+SRC			:=	$(addprefix $(SRC_DIR), $(SRC_FILES))
+OBJ			:=	$(addprefix $(OBJ_DIR), $(OBJ_FILES))
+DEP			:=	$(addprefix $(DEP_DIR), $(DEP_FILES))
 
 all: $(NAME)
 
@@ -35,13 +37,15 @@ $(NAME): $(OBJ)
 		@tput cuu1 dl1
 		@echo "ZOMBIE CREATED  " 
 
-
 $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
-	@mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I $(INC_DIR) -o $@ -c $<
+	@mkdir -p $(OBJ_DIR) $(DEP_DIR)
+	@$(CPP) $(CPPFLAGS) -I $(INC_DIR) -o $@ -c $<
+	@mv $(OBJ_DIR)$*.d $(DEP_DIR)
 	
+-include $(DEP)
+
 clean:
-	@$(RM) -fr $(OBJ_DIR)
+	@$(RM) -fr $(OBJ_DIR) $(DEP_DIR)
 	@echo ZOMBIE DESTROYED BYE !
 	@sleep 1
 	@tput cuu1 dl1

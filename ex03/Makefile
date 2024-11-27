@@ -5,23 +5,22 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/26 19:41:33 by jgasparo          #+#    #+#              #
-#    Updated: 2024/11/27 18:37:45 by jgasparo         ###   ########.fr        #
+#    Created: 2024/11/27 10:14:04 by jgasparo          #+#    #+#              #
+#    Updated: 2024/11/27 18:31:47 by jgasparo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		:= brain
+NAME 		:= humans
 
 CPP 		:= c++
-CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD
+CPPFLAGS	:= -MMD -Wall -Wextra -Werror -std=c++98
 
-SRC_DIR		:=	./
+SRC_DIR		:=	sources/
 OBJ_DIR		:=	.obj/
 DEP_DIR		:=	.dep/
-INC_DIR		:=	includes/
+INC_DIR		:=	include/
 
-SRC_FILES	:= main.cpp
-
+SRC_FILES	:= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJ_FILES	:=	$(SRC_FILES:.cpp=.o)
 DEP_FILES	:=	$(OBJ_FILES:.o=.d)
 
@@ -32,11 +31,11 @@ DEP			:=	$(addprefix $(DEP_DIR), $(DEP_FILES))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@echo CREATING BRAIN
+		@echo CREATING HUMANS
 		@$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJ)
 		@sleep 1
 		@tput cuu1 dl1
-		@echo "BRAIN CREATED  " 
+		@echo "HUMANS CREATED  " 
 
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
@@ -45,16 +44,16 @@ $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
 	@mv $(OBJ_DIR)$*.d $(DEP_DIR)
 
 -include $(DEP)
-
+	
 clean:
 	@$(RM) -fr $(OBJ_DIR) $(DEP_DIR)
-	@echo BRAIN DESTROYED BYE !
+	@echo HUMANS DESTROYED BYE !
 	@sleep 1
 	@tput cuu1 dl1
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo BRAIN DESTROYED BYE !
+	@echo HUMANS DESTROYED BYE !
 	@sleep 1
 	@tput cuu1 dl1
 

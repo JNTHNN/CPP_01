@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:41:42 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 10:08:18 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/27 10:25:54 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	main(void)
 {
 	std::string	str("HI THIS IS BRAIN");
-	std::string	*stringPTR = &str;
-	std::string	&stringREF = str;
+	std::string	*stringPTR(&str);
+	std::string	&stringREF(str);
 
 	std::cout << "STRING	ADDRESS : " << &str << std::endl;
 	std::cout << "STRINGPTR	ADDRESS : " << &stringPTR << std::endl;
