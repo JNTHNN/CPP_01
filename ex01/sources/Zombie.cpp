@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:18:26 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/26 18:20:19 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/27 20:15:11 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void	Zombie::announce(void)
 
 void	Zombie::setName(std::string name)
 {
-	this->_name = name;
+	_name = name;
 }

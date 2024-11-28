@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:14:00 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:10:09 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/27 18:58:21 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class HumanB
 	public:
 		HumanB(const std::string name);
 		~HumanB();
-		void	attack(void) const;
+		void	attack() const;
 		void	setWeapon(Weapon &type);
 
 };

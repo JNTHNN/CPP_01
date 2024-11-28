@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:13:57 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 17:39:30 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/27 18:58:02 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class HumanA
 	public:
 		HumanA(std::string name, Weapon &_type);
 		~HumanA();
-		void	attack(void) const;
+		void	attack() const;
 };
 
 #endif

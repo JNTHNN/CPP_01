@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   utils.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 10:14:09 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:58:39 by jgasparo         ###   ########.fr       */
+/*   Created: 2024/11/28 14:27:47 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/11/28 18:15:01 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#include "../includes/utils.hpp"
 
-#include <iostream>
-
-class Weapon
+bool	enoughArgs(const int nb)
 {
-	private:
-		std::string	_type;
-		
-	public:
-		Weapon(const std::string &type);
-		~Weapon(void);
-		std::string	getType() const;
-		void		setType(const std::string &type);
-};
-
-#endif
+		switch (nb)
+	{
+		case 1:
+			std::cout << NO_ARG << std::endl;
+			return false;
+		case 2:
+			std::cout << FEW_ARGS << std::endl;
+			return false;
+		case 3:
+			std::cout << FEW_ARGS << std::endl;
+			return false;
+		case 4:
+			break;
+		default:
+			std::cout << TOO_MANY << std::endl;
+			return false;
+	}
+	return true;
+}

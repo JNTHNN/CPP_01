@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:14:07 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 17:51:05 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/27 20:27:38 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@ Weapon::Weapon(const std::string &type)
 
 Weapon::~Weapon()
 {
+	// std::cout << "The weapons " << _type << " has destroyed" << std::endl;
 	return;
 }
 
 
-std::string	Weapon::getType() const
+std::string	Weapon::getType(void) const
 {
 	return _type;
 }

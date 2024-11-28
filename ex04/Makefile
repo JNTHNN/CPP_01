@@ -5,22 +5,22 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/26 19:41:33 by jgasparo          #+#    #+#              #
-#    Updated: 2024/11/27 18:44:55 by jgasparo         ###   ########.fr        #
+#    Created: 2024/11/27 20:57:09 by jgasparo          #+#    #+#              #
+#    Updated: 2024/11/28 18:03:33 by jgasparo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		:= brain
+NAME 		:= sed
 
 CPP 		:= c++
-CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD
+CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD -fsanitize=address -g
 
-SRC_DIR		:=	./
+SRC_DIR		:=	sources/
 OBJ_DIR		:=	.obj/
 DEP_DIR		:=	.dep/
 INC_DIR		:=	includes/
 
-SRC_FILES	:= main.cpp
+SRC_FILES	:= main.cpp utils.cpp Parameters.cpp
 
 OBJ_FILES	:=	$(SRC_FILES:.cpp=.o)
 DEP_FILES	:=	$(OBJ_FILES:.o=.d)
@@ -32,11 +32,11 @@ DEP			:=	$(addprefix $(DEP_DIR), $(DEP_FILES))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@echo CREATING BRAIN
+		@echo CREATING SED
 		@$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJ)
 		@sleep 1
 		@tput cuu1 dl1
-		@echo "BRAIN CREATED  " 
+		@echo "SED CREATED  " 
 
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
@@ -48,13 +48,13 @@ $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
 
 clean:
 	@$(RM) -fr $(OBJ_DIR) $(DEP_DIR)
-	@echo BRAIN DESTROYED BYE !
+	@echo SED DESTROYED BYE !
 	@sleep 1
 	@tput cuu1 dl1
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo BRAIN DESTROYED BYE !
+	@echo SED DESTROYED BYE !
 	@sleep 1
 	@tput cuu1 dl1
 

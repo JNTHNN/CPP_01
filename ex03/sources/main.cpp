@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:14:02 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 17:52:51 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/27 18:50:49 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ int	main()
 	}
 	{
 		HumanB	dave("Dave");
-		dave.attack();
-		
+		dave.attack();	
 	}
 	return 0;
 }

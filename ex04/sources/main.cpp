@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 10:14:09 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:58:39 by jgasparo         ###   ########.fr       */
+/*   Created: 2024/11/27 20:59:33 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/11/28 19:40:42 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#include "../includes/utils.hpp"
 
-#include <iostream>
-
-class Weapon
+int	main(int argc, char *argv[])
 {
-	private:
-		std::string	_type;
-		
-	public:
-		Weapon(const std::string &type);
-		~Weapon(void);
-		std::string	getType() const;
-		void		setType(const std::string &type);
-};
-
-#endif
+	if (enoughArgs(argc))
+	{
+		Parameters	args(argv[1], argv[2], argv[3]);
+		if (args.getFilename().empty() || args.getS1().empty())
+		{
+			std::cout << EMPTY << std::endl;
+			return EXIT_FAILURE;
+		}
+		args.setOutputFile();
+		args.replaceS1S2();
+	}
+	return EXIT_FAILURE;	
+}

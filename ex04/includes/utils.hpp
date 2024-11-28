@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 10:14:09 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:58:39 by jgasparo         ###   ########.fr       */
+/*   Created: 2024/11/28 14:28:14 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/11/28 19:41:43 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#ifndef UTILS_HPP
+# define UTILS_HPP
+
+#define NO_ARG		"No Arg, No Party : ./sed filename s1 s2"
+#define	FEW_ARGS	"Almost ! : ./sed filename s1 s2"
+#define	TOO_MANY	"Too many !!! : ./sed filename s1 s2"
+#define	EMPTY		"Filename or s1 can't be empty"
+#define	ERROR		"Error with file "
+#define	SUFFIX		".replace"
 
 #include <iostream>
+#include <fstream>
+#include "./Parameters.hpp"
 
-class Weapon
-{
-	private:
-		std::string	_type;
-		
-	public:
-		Weapon(const std::string &type);
-		~Weapon(void);
-		std::string	getType() const;
-		void		setType(const std::string &type);
-};
+bool	enoughArgs(const int nb);
+
 
 #endif
