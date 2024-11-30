@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:14:09 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:58:39 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:25:26 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define WEAPON_HPP
 
 #include <iostream>
+#include <string>
 
 class Weapon
 {

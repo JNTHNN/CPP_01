@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:14:00 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 18:58:21 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:25:20 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define HUMANB_HPP
 
 #include <iostream>
+#include <string>
 #include "Weapon.hpp"
 
 class HumanB

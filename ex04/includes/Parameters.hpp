@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 15:04:57 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/30 18:17:12 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:25:33 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include "utils.hpp"
 #include <iostream>
+#include <string>
 #include <fstream>
 
 class Parameters

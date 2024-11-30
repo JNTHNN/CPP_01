@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 19:48:34 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/29 22:54:25 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:25:47 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #define GOOD	"ALL IS GOOD MY FRIEND"
 
 #include <iostream>
+#include <string>
 
 
 class Harl

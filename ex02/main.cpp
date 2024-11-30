@@ -6,11 +6,12 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:41:42 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 10:25:54 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:25:04 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
 
 int	main(void)
 {

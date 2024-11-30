@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:34:43 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/30 10:03:08 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:26:02 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #define NO_ARG	"Harl can't complain without level, over."
 
 #include <iostream>
+#include <string>
 
 class Harl
 {
