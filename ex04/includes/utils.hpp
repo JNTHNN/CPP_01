@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 14:28:14 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/28 19:41:43 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:17:40 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@
 #define	ERROR		"Error with file "
 #define	SUFFIX		".replace"
 
-#include <iostream>
-#include <fstream>
-#include "./Parameters.hpp"
+#include "Parameters.hpp"
 
 bool	enoughArgs(const int nb);
 
