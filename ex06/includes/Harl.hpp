@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:34:43 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/29 22:56:52 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/11/30 10:03:08 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 #define INFO	"[ INFO ]\nI cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger ! If you did, I wouldn’t be asking for more !"
 #define WARNING	"[ WARNING ]\nI think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month."
 #define ERROR	"[ ERROR ]\nThis is unacceptable ! I want to speak to the manager now."
-#define GOOD	"[ Probably complaining about insignificant problems ]"
+#define OTHER	"[ Probably complaining about insignificant problems ]"
+#define NO_ARG	"Harl can't complain without level, over."
 
 #include <iostream>
 
