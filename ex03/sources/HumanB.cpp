@@ -6,14 +6,13 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:13:52 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 20:27:26 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/02 13:27:04 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/HumanB.hpp"
 
-
-HumanB::HumanB(std::string name): _type(nullptr)
+HumanB::HumanB(std::string name): _type(NULL)
 {
 	_name = name;
 	std::cout << _name << " joins the battle" << std::endl;

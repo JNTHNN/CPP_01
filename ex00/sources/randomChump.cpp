@@ -6,12 +6,11 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 18:54:09 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/10/04 21:21:01 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:30:37 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Zombie.hpp"
-
 
 void randomChump(std::string name)
 {

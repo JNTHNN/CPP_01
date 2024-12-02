@@ -1,3 +1,7 @@
-Faire le makefile avec les obj + includes + regles re fclean etc ... 
-pareil pour cpp 00
-check leaks ex00
+Refaire le ex00 -> fonction en dehors de la classe -> delete au bon endroit
+
+dans le ex02, faire stringPTR et pas &stringPTR
+
+dans le ex03, faire const std::string getType() const; et donc mettre le std::string _type en const ?
+
+ex04: segfault quand S1 == ""

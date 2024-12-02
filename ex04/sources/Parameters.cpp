@@ -6,13 +6,13 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 15:08:47 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/28 19:42:39 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/02 13:27:52 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Parameters.hpp"
 
-Parameters::Parameters(const std::string &file, const std::string &str1, const std::string &str2): filename(file), s1(str1), s2(str2), inputFile(nullptr), outputFile(nullptr)
+Parameters::Parameters(const std::string &file, const std::string &str1, const std::string &str2): filename(file), s1(str1), s2(str2), inputFile(NULL), outputFile(NULL)
 {
 	inputFile = new std::ifstream(file.c_str());
 	if (!inputFile->is_open())
@@ -28,10 +28,8 @@ Parameters::~Parameters()
 		if (outputFile->is_open())
 			outputFile->close();
 		delete outputFile;
-		outputFile = nullptr;
 	}
 	delete inputFile;
-	inputFile = nullptr;
 	return;
 }
 

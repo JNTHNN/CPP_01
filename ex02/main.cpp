@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:41:42 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/30 18:25:04 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/02 17:34:02 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 	std::string	&stringREF(str);
 
 	std::cout << "STRING	ADDRESS : " << &str << std::endl;
-	std::cout << "STRINGPTR	ADDRESS : " << &stringPTR << std::endl;
+	std::cout << "STRINGPTR	ADDRESS : " << stringPTR << std::endl;
 	std::cout << "STRINGREF	ADDRESS : " << &stringREF << std::endl;
 
 	std::cout << "---------------------" << std::endl;

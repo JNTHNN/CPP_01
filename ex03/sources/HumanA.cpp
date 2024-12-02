@@ -6,12 +6,11 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 10:13:54 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/27 20:27:30 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/02 13:36:13 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/HumanA.hpp"
-
 
 HumanA::HumanA(std::string name, Weapon &type): _type(type)
 {

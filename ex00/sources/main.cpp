@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 14:41:21 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/26 18:41:39 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:29:19 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ int	main(int argc, char **argv)
 {
 	if (checkNames(argc))
 	{
-		Zombie*	zombie(nullptr);
+		Zombie*	zombie(NULL);
 		zombie->newZombie(argv[1]);
 		randomChump(argv[2]);
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }

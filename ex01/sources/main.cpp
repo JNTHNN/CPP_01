@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:21:12 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/26 19:18:02 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:31:09 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ int	main(void)
 	for (int i = 0; i < zombieCount; ++i)
 		horde[i].announce();
 	delete []horde;
-	horde = nullptr;
 	return EXIT_SUCCESS;
 }
