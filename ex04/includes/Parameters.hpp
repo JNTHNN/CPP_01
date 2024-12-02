@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 15:04:57 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/02 15:34:51 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/02 22:15:54 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,14 @@ class Parameters
 		std::string		s2;
 		std::ifstream	*inputFile;
 		std::ofstream	*outputFile;
+		
 	public:
 		Parameters(const std::string &file, const std::string &str1, const std::string &str2);
 		~Parameters();
 
 		const	std::string &getFilename();
-		const	std::string &getS1();
-		const	std::string &getS2();
+		const	std::string &getS1() const;
+		const	std::string &getS2() const;
 		void	setOutputFile();
 		void	replaceS1S2();
 

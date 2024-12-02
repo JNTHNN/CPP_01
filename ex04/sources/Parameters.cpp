@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 15:08:47 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/02 13:27:52 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/02 22:13:28 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ Parameters::Parameters(const std::string &file, const std::string &str1, const s
 
 Parameters::~Parameters()
 {
-	if (inputFile->is_open())
+	if (inputFile != NULL && inputFile->is_open())
 	{
 		inputFile->close();
-		if (outputFile->is_open())
+		if (outputFile != NULL && outputFile->is_open())
 			outputFile->close();
 		delete outputFile;
 	}
@@ -38,12 +38,12 @@ const std::string	&Parameters::getFilename(void)
 	return filename;
 }
 
-const std::string	&Parameters::getS1(void)
+const std::string	&Parameters::getS1(void) const
 {
 	return s1;
 }
 
-const std::string	&Parameters::getS2(void)
+const std::string	&Parameters::getS2(void) const
 {
 	return s2;
 }

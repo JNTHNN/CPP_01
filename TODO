@@ -5,3 +5,62 @@ dans le ex02, faire stringPTR et pas &stringPTR
 dans le ex03, faire const std::string getType() const; et donc mettre le std::string _type en const ?
 
 ex04: segfault quand S1 == ""
+
+ajouter g++ -fno-exceptions a la compil pour remplacer le std::bad_alloc par un pointeur NULL si new echoue
+
+leaks --atExit -- ./my_program
+
+
+quand on init un *ptr puis qu'on assign une adresse (ex: ptr = &var)
+
+ - si on cout << ptr = 0x1234 (adresse)
+ - si on cout << *ptr = 19 (valeur) (on déréférence le pointeur)
+
+ Pour une variable int nombre  :
+
+nombre permet d'accéder à la valeur de la variable ;
+
+&nombre permet d'accéder à l'adresse de la variable.
+
+Sur un pointeur int *pointeur  :
+
+pointeur permet d'accéder à la valeur du pointeur, c'est-à-dire à l'adresse de la variable pointée ;
+
+*pointeur permet d'accéder à la valeur de la variable pointée
+
+
+L'allocation de mémoire sur le tas (heap) ou sur la pile (stack) dépend du contexte et des besoins spécifiques de votre application. Voici quelques considérations pour décider quand utiliser chaque type d'allocation :
+
+Allocation sur la pile stack
+Avantages :
+
+Performance : L'allocation et la désallocation sur la pile sont généralement plus rapides car elles sont gérées automatiquement par le compilateur.
+Simplicité : Pas besoin de gérer manuellement la mémoire (pas de new ou delete).
+Sécurité : Moins de risques de fuites de mémoire et de pointeurs pendants.
+Inconvénients :
+
+Limité par la taille de la pile : La pile a une taille limitée, donc les objets très volumineux ou un grand nombre d'objets peuvent causer un dépassement de pile (stack overflow).
+Durée de vie limitée : Les objets alloués sur la pile sont détruits automatiquement à la fin du bloc de code dans lequel ils sont définis.
+Quand utiliser :
+
+Lorsque vous avez besoin d'objets temporaires dont la durée de vie est limitée à la portée d'une fonction ou d'un bloc de code.
+Lorsque la taille des objets est relativement petite.
+Allocation sur le tas (heap)
+Avantages :
+
+Flexibilité : Permet d'allouer de grandes quantités de mémoire et de créer des objets dont la durée de vie dépasse la portée d'une fonction ou d'un bloc de code.
+Durée de vie contrôlée :
+Vous pouvez contrôler explicitement la durée de vie des objets en utilisant new et delete.
+Inconvénients :
+
+Gestion manuelle de la mémoire : Vous devez gérer manuellement l'allocation et la désallocation de la mémoire, ce qui peut entraîner des fuites de mémoire si vous oubliez de libérer la mémoire allouée.
+Performance : L'allocation et la désallocation sur le tas sont généralement plus lentes que sur la pile.
+Quand utiliser :
+
+Lorsque vous avez besoin d'objets dont la durée de vie dépasse la portée d'une fonction ou d'un bloc de code.
+Lorsque vous avez besoin d'allouer de grandes quantités de mémoire.
+Lorsque vous ne connaissez pas à l'avance le nombre d'objets dont vous aurez besoin.
+
+Inclusion des fichiers de dépendances
+-include $(DEP)
+a faire dans les makefiles

@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 19:48:34 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/02 15:35:44 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/02 22:15:46 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class Harl
 		void	info();
 		void	warning();
 		void	error();
+		
 	public:
 		Harl();
 		~Harl();

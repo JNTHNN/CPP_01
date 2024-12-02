@@ -6,14 +6,14 @@
 #    By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/27 20:57:09 by jgasparo          #+#    #+#              #
-#    Updated: 2024/12/02 15:35:22 by jgasparo         ###   ########.fr        #
+#    Updated: 2024/12/02 21:41:13 by jgasparo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		:= sed
 
 CPP 		:= c++
-CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD
+CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD -fsanitize=address -g
 
 SRC_DIR		:=	sources/
 OBJ_DIR		:=	.obj/
