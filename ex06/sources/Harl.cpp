@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:34:45 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/11/30 10:02:47 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/03 21:27:24 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
-	void	(Harl::*levels[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	const std::string	complain[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	size_t	i(0);
@@ -56,13 +55,13 @@ void	Harl::complain(std::string level)
 	switch (i)
 	{
 		case 0:
-			(this->*levels[0])();
+			debug();
 		case 1:
-			(this->*levels[1])();
+			info();
 		case 2:
-			(this->*levels[2])();
+			warning();
 		case 3:
-			(this->*levels[3])();
+			error();
 			break;
 		default:
 			std::cout << OTHER << std::endl;
