@@ -6,14 +6,14 @@
 #    By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/04 21:39:19 by jgasparo          #+#    #+#              #
-#    Updated: 2024/12/02 15:31:43 by jgasparo         ###   ########.fr        #
+#    Updated: 2024/12/03 21:08:42 by jgasparo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		:= zombie
 
 CPP 		:= c++
-CPPFLAGS	:= -MMD -Wall -Wextra -Werror -std=c++98
+CPPFLAGS	:= -MMD -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRC_DIR		:=	sources/
 OBJ_DIR		:=	.obj/
