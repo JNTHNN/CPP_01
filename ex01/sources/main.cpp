@@ -19,9 +19,9 @@ int	main(void)
 
 	horde = zombieHorde(zombieCount, "Monster");
 	if (!horde)
-		return EXIT_FAILURE;
+		return 1;
 	for (int i = 0; i < zombieCount; ++i)
 		horde[i].announce();
 	delete []horde;
-	return EXIT_SUCCESS;
+	return 0;
 }

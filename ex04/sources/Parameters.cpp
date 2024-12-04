@@ -52,7 +52,7 @@ void	Parameters::setOutputFile(void)
 {
 	if (inputFile->is_open())
 	{
-		outputFile = new std::ofstream(filename + SUFFIX);
+		outputFile = new std::ofstream((filename + SUFFIX).c_str());
 		if (!outputFile->is_open())
 			std::cout << ERROR << filename + SUFFIX << std::endl;
 	}

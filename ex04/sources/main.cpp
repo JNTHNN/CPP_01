@@ -20,10 +20,10 @@ int	main(int argc, char *argv[])
 		if (args.getFilename().empty() || args.getS1().empty())
 		{
 			std::cout << EMPTY << std::endl;
-			return EXIT_FAILURE;
+			return 1;
 		}
 		args.setOutputFile();
 		args.replaceS1S2();
 	}
-	return EXIT_FAILURE;	
+	return 1;	
 }

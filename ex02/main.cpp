@@ -29,5 +29,5 @@ int	main(void)
 	std::cout << "STRINGPTR VALUE : " << *stringPTR << std::endl;
 	std::cout << "STRINGREF VALUE : " << stringREF << std::endl;
 
-	return EXIT_SUCCESS;
+	return 0;
 }
